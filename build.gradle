@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.otus.qa.lessons'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    implementation("org.seleniumhq.selenium:selenium-java:4.1.4")
+    implementation("io.github.bonigarcia:webdrivermanager:5.2.0")
+    implementation('org.testng:testng:7.1.0')
+}
+
+test {
+    useTestNG()
+}
